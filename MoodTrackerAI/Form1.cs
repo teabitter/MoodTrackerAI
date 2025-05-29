@@ -16,5 +16,10 @@ namespace MoodTrackerAI
         {
             InitializeComponent();
         }
+
+        private void btnAnalyze_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
