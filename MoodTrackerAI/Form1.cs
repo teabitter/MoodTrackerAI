@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.IO;
 
 
 namespace MoodTrackerAI
@@ -82,6 +83,30 @@ namespace MoodTrackerAI
             foreach (var entry in moodEntries)
             {
                 chartMood.Series["Mood"].Points.AddXY(entry.Time, entry.IsPositive ? 1 : 0);
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "CSV files (*.csv)|*.csv";
+                saveFileDialog.Title = "Save Mood History";
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    using (StreamWriter writer = new StreamWriter(saveFileDialog.FileName))
+                    {
+                        writer.WriteLine("Time,Mood");
+                        foreach (var entry in moodEntries)
+                        {
+                            string mood = entry.IsPositive ? "Positive" : "Negative";
+                            writer.WriteLine($"{entry.Time},{mood}");
+                        }
+                    }
+
+                    MessageBox.Show("Mood history saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
     }
