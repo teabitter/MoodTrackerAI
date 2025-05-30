@@ -36,9 +36,9 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnAnalyze = new System.Windows.Forms.Button();
             this.lblMood = new System.Windows.Forms.Label();
-            this.moodChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartMood = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lstHistory = new System.Windows.Forms.ListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.moodChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartMood)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEntry
@@ -73,21 +73,21 @@
             this.lblMood.Size = new System.Drawing.Size(202, 54);
             this.lblMood.TabIndex = 3;
             // 
-            // moodChart
+            // chartMood
             // 
             chartArea1.Name = "ChartArea1";
-            this.moodChart.ChartAreas.Add(chartArea1);
+            this.chartMood.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.moodChart.Legends.Add(legend1);
-            this.moodChart.Location = new System.Drawing.Point(829, 182);
-            this.moodChart.Name = "moodChart";
+            this.chartMood.Legends.Add(legend1);
+            this.chartMood.Location = new System.Drawing.Point(829, 182);
+            this.chartMood.Name = "chartMood";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
-            this.moodChart.Series.Add(series1);
-            this.moodChart.Size = new System.Drawing.Size(323, 329);
-            this.moodChart.TabIndex = 4;
-            this.moodChart.Text = "chart1";
+            this.chartMood.Series.Add(series1);
+            this.chartMood.Size = new System.Drawing.Size(323, 329);
+            this.chartMood.TabIndex = 4;
+            this.chartMood.Text = "chart1";
             // 
             // lstHistory
             // 
@@ -104,14 +104,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1209, 634);
             this.Controls.Add(this.lstHistory);
-            this.Controls.Add(this.moodChart);
+            this.Controls.Add(this.chartMood);
             this.Controls.Add(this.lblMood);
             this.Controls.Add(this.btnAnalyze);
             this.Controls.Add(this.txtEntry);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.moodChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartMood)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,7 +123,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button btnAnalyze;
         private System.Windows.Forms.Label lblMood;
-        private System.Windows.Forms.DataVisualization.Charting.Chart moodChart;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartMood;
         private System.Windows.Forms.ListBox lstHistory;
     }
 }

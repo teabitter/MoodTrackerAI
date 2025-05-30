@@ -10,9 +10,7 @@ namespace MoodTrackerAI
 {
     public class SentimentData
     {
-        [LoadColumn(0)]
         public string Text { get; set; }
-        [LoadColumn(1)]
-        public bool Label { get; set; } // true for positive, false for negative
+        public bool Label { get; set; }
     }
 }
