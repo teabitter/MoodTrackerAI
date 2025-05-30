@@ -12,24 +12,30 @@ namespace MoodTrackerAI
 {
     public partial class Form1 : Form
     {
-        private MoodAnalyzer analyzer;
+        private SentimentAnalyzer analyzer;
         public Form1()
         {
             InitializeComponent();
+            analyzer = new SentimentAnalyzer();
         }
 
         private void btnAnalyze_Click(object sender, EventArgs e)
         {
-            string userInput = txtEntry.Text;
-            string mood = analyzer.PredictMood(userInput);
-            lblMood.Text = $"Predicted Mood: {mood}";   
-
-            //add a save button for mood and entry to a list or file
+            string input = txtEntry.Text;
+            if(!string.IsNullOrWhiteSpace(input))
+            {
+                var prediction = analyzer.Predict(input);   
+                lblMood.Text = prediction.PredictedLabel ? "Positive Mood" : "Negative Mood";
+            }
+            else
+            {
+                lblMood.Text = "Please enter some text to analyze.";
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            analyzer = new MoodAnalyzer();
+            analyzer = new SentimentAnalyzer();
         }
     }
 }

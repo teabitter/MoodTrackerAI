@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.txtEntry = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnAnalyze = new System.Windows.Forms.Button();
@@ -43,10 +43,10 @@
             // 
             // txtEntry
             // 
-            this.txtEntry.Location = new System.Drawing.Point(66, 84);
+            this.txtEntry.Location = new System.Drawing.Point(107, 242);
             this.txtEntry.Multiline = true;
             this.txtEntry.Name = "txtEntry";
-            this.txtEntry.Size = new System.Drawing.Size(204, 43);
+            this.txtEntry.Size = new System.Drawing.Size(273, 67);
             this.txtEntry.TabIndex = 0;
             // 
             // contextMenuStrip1
@@ -57,7 +57,7 @@
             // 
             // btnAnalyze
             // 
-            this.btnAnalyze.Location = new System.Drawing.Point(96, 213);
+            this.btnAnalyze.Location = new System.Drawing.Point(240, 378);
             this.btnAnalyze.Name = "btnAnalyze";
             this.btnAnalyze.Size = new System.Drawing.Size(140, 39);
             this.btnAnalyze.TabIndex = 2;
@@ -68,24 +68,24 @@
             // lblMood
             // 
             this.lblMood.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblMood.Location = new System.Drawing.Point(417, 28);
+            this.lblMood.Location = new System.Drawing.Point(474, 78);
             this.lblMood.Name = "lblMood";
             this.lblMood.Size = new System.Drawing.Size(202, 54);
             this.lblMood.TabIndex = 3;
             // 
             // moodChart
             // 
-            chartArea2.Name = "ChartArea1";
-            this.moodChart.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.moodChart.Legends.Add(legend2);
-            this.moodChart.Location = new System.Drawing.Point(580, 213);
+            chartArea1.Name = "ChartArea1";
+            this.moodChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.moodChart.Legends.Add(legend1);
+            this.moodChart.Location = new System.Drawing.Point(829, 182);
             this.moodChart.Name = "moodChart";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.moodChart.Series.Add(series2);
-            this.moodChart.Size = new System.Drawing.Size(300, 300);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.moodChart.Series.Add(series1);
+            this.moodChart.Size = new System.Drawing.Size(323, 329);
             this.moodChart.TabIndex = 4;
             this.moodChart.Text = "chart1";
             // 
@@ -93,9 +93,9 @@
             // 
             this.lstHistory.FormattingEnabled = true;
             this.lstHistory.ItemHeight = 25;
-            this.lstHistory.Location = new System.Drawing.Point(116, 389);
+            this.lstHistory.Location = new System.Drawing.Point(528, 182);
             this.lstHistory.Name = "lstHistory";
-            this.lstHistory.Size = new System.Drawing.Size(120, 79);
+            this.lstHistory.Size = new System.Drawing.Size(205, 329);
             this.lstHistory.TabIndex = 5;
             // 
             // Form1
